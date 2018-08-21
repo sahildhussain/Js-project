@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4286f4;
+    color: white;
+}
+</style>
+</head>
+<body>
+
+<h2>Colored Table Header</h2>
+
+<table id="hello"></table>
+
+<script>
+var contents=[
+{name:"Cake", price:400,quantity:0},
+{name:"Milk", price:40,quantity:0},
+{name:"Coffee", price:50,quantity:0},
+{name:"Pastry", price:30,quantity:0},]
+var text=`<tr>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Quantity</th>
+  </tr>`;
+for(var c=0;c<contents.length;c++)
+{	text+="<tr>";
+	text+="<td>"+contents[c].name+"</td>"
+    text+="<td>"+contents[c].price+"</td>"
+    text+="<td>"+contents[c].quantity+"</td>"
+    text+="</tr>"
+}
+document.getElementById("hello").innerHTML=text;
+</script>
+</body>
+</html>
